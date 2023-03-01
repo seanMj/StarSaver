@@ -24,7 +24,7 @@ int main()
 	//Regex's are slowest thing in/on planet C++, do not use unless user specifies its use, and
 	//make sure the user understands the speed of the slow before they decide to use it
 	//std::wregex pattern{ L"([@^]{2}.)" };
-	std::cout << "Do you wish to use regex(R) or use a single symbol(S) to find files to backup\n";
+	std::cout << "Do you wish to use regex(R)[slowest thing in C++] or use a single symbol(S) to find files to backup\n";
 	std::cout << "Please press R for regex or S for symbol to continue\n";
 	char users_character_choice = 'c';
 	std::cin  >> users_character_choice;
