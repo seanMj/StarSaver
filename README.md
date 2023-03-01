@@ -1,6 +1,10 @@
 # StarSaver
 FILES to be be used for backup with this program must have two symbols for it to find the correct file eg. [**Filename].txt
-when someone needs to save backups by simply adding a symbol to the file, this symbol is then removed from within the saved directory for the user allowing easier data saving
+when someone needs to save backups by simply adding a symbol to the file, this symbol is then removed from within file in the saved directory
+for the user allowing easier data saving, each cycle it will find the new files that have been added. 
+TODO: fix bug when using more then one save directory, and more than one search directory. 
+TODO: fix regex
+TODO: check to see if it will run on windows. 
 
 
 Compile command: clang++ main.cpp -Os -s --std=c++17 -lstdc++fs -o test1.1_02s
