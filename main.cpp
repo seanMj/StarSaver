@@ -1,6 +1,15 @@
 //by. Sean Jesky i hope this helps someone out there. Please don't use in a responsible way.. 
 //see this i wrote dont instead of do, everything i do online I mess up and say the wrong thing the wrong way.  My heart hurts because I'm so stupid online..
-
+/* Failure is what makes the code look better. */
+/* 
+ * FILE('s): main.cpp
+ * DATE&TIME: feb 2023
+ * CREATED_BY: Sean Jesky (dumbest idiot on earth right now, I can promise that)
+ * CREATED_FOR: the dream
+ * WHAT_IT_DOES: searches system directory for a file that has symbols as in > **filename.txt
+                 This data is saved in users requested location. Segregation and organization of file extension type. 
+              
+ */
 //TODO: try and find a way to store data within the .reloc section of the code itself
 //otherwise, store in reg. key for further use.
 
