@@ -12,7 +12,7 @@
  */
 //TODO: try and find a way to store data within the .reloc section of the code itself
 //otherwise, store in reg. key for further use.
-
+//TODO: make sure to finish user input validation and checks first. 
 #include <vector>
 #include "Star_Saver.hpp"
 #include "File_Extension_Orginization.hpp"
