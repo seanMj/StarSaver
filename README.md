@@ -7,7 +7,7 @@ Compile command: clang++ main.cpp -Os -s --std=c++17 -lstdc++fs -o test1.1_02s
 
 
 dream
- * WHAT_IT_DOES: searches system directory for a file that has symbols as in > "**filename.txt" or "filename**.txt"
+ * WHAT_IT_DOES: searches system directory for a file that has symbols as in > "[symbol][symbol]filename.txt" or "filename[symbol][symbol].txt"
                  This data is found, copied and then the symbol is removed from the file in users requested location. 
                  Then files are Segregated through organization of file extension type. 
               
