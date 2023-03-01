@@ -1,3 +1,5 @@
+//by. Sean Jesky i hope this helps someone out there. Please don't use in a responsible way.. 
+
 //TODO: try and find a way to store data within the .reloc section of the code itself
 //otherwise, store in reg. key for further use.
 
