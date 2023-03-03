@@ -1,4 +1,4 @@
-# StarSaver
+# StarSaver backup program!
 WORK IN PROGRESS, ONLY SUPPORTS A SINGLE DIRECTORYS FOR SEARCH AND SAVE, BUG USING MULTIPLES CURRENTLY. OH GOD ITS IN ALL CAPS. 
     FILES to be be used for backup with this program must have two symbols for it to find the correct file eg. [**Filename].txt
 when someone needs to save backups by simply adding a symbol to the file, this symbol is then removed from within file in the saved directory
