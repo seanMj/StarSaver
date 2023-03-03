@@ -1,6 +1,4 @@
 //by. Sean Jesky i hope this helps someone out there. Please don't use in a responsible way.. 
-//see this i wrote dont instead of do, everything i do online I mess up and say the wrong thing the wrong way.  My heart hurts because I'm so stupid online..
-/* Failure is what makes the code look better. */
 /* 
  * FILE('s): main.cpp
  * DATE&TIME: feb 2023
