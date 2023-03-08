@@ -87,3 +87,7 @@ int main()
 		how_often_to_repeat(level);
 	}
 }
+
+TODO: Read from memory into file, check file entries (in secondary thread) 
+      To see if any previous values are still valid and if so, save into vector
+      Merge to what ss has found and use that data for files to backup?
