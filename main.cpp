@@ -14,13 +14,6 @@
 #include <vector>
 #include "Star_Saver.hpp"
 #include "File_Extension_Orginization.hpp"
-
-#include "StarTimeSaver.hpp"
-
-#include <vector>
-#include "Star_Saver.hpp"
-#include "File_Extension_Orginization.hpp"
-
 #include "StarTimeSaver.hpp"
 
 int main()
