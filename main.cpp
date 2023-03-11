@@ -48,7 +48,6 @@ int main()
 		std::cout << "Please enter a symbol that you will add to front of filename eg. * or, #, etc.\n(enter a symbol value, then press enter):\n";
 		std::cin >> symbol;
 	}
-
 	else{
 		return EXIT_FAILURE;
 	}
@@ -61,15 +60,14 @@ int main()
 		return EXIT_FAILURE;
 	}
 	//..
-
-
 	fs::path where_to_save;
-	/*std::vector<fs::path>*/fs::path where_to_search_for_symboled_files;
-
+	/*std::vector<fs::path>*/
+	fs::path where_to_search_for_symboled_files;
 
 	std::cout << "please enter where to save:\n";
 	std::cin >> where_to_save;
-	if(!(fs::exists(where_to_save))){
+	if(!(fs::exists(where_to_save)))
+	{
 		throw std::runtime_error("Please enter a valid location for saving your backups..");
 	}
 
@@ -91,7 +89,8 @@ int main()
 			= Star_Saver::search_directory_files(where_to_search_for_symboled_files, symbol);
 		}
 
-		else if(users_character_choice == 'R' || users_character_choice == 'r'){
+		else if(users_character_choice == 'R' || users_character_choice == 'r')
+		{
 			search_this_Data
 			= Star_Saver::search_directory_files(where_to_search_for_symboled_files, reg_search_critera);
 		}
