@@ -13,6 +13,9 @@ dreaming
               
 
 
+    TODO: Fix bug when symbol is moved from start to middle of filename.
+          Causes the program to try and remove a symbol it cannot reach.
+          Honestly should have thought of that first. 
     TODO: fix bug when using more then one save directory, and more than one search directory. 
     TODO: fix regex
     TODO: check to see if it will run on windows. 
