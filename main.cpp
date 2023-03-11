@@ -17,7 +17,7 @@
 #include <string>
 #include <regex>
 #include <filesystem>
-//..
+//...
 #include "Star_Saver.hpp"
 #include "File_Extension_Orginization.hpp"
 #include "StarTimeSaver.hpp"
@@ -29,7 +29,6 @@ int main()
 	//std::wregex pattern{ L"([@^]{2}.)" };
 	std::cout << "Do you wish to use regex(R) or using a single symbol(S)\n";
 	std::cout << "Please press R or r & enter for regex, or press S or s & enter for symbol:\n";
-	
 
 	//leave it up to the user to not make a mess right here, there.. that will always work!
 	char users_character_choice = 'c';
@@ -37,7 +36,6 @@ int main()
 	char symbol = '*';
 
 	std::regex reg_search_critera;
-
 	if(users_character_choice == 'r' || users_character_choice == 'R')
 	{
 		std::cout << "Please enter a Regex that you will use to find files:\n";
@@ -47,7 +45,7 @@ int main()
 
 	}else if(users_character_choice == 's' || users_character_choice == 'S')
 	{
-		std::cout << "Please enter a symbol that you will add to front of filename eg. * or, #, etc\n";
+		std::cout << "Please enter a symbol that you will add to front of filename eg. * or, #, etc.\n(enter a symbol value, then press enter):\n";
 		std::cin >> symbol;
 	}
 
@@ -55,7 +53,7 @@ int main()
 		return EXIT_FAILURE;
 	}
 
-	std::cout << "please enter what sleep mode to use\n[+] level 1 : 1 min\n[+] level 2 : 60 min\n[+] level 3 : 1 day\n";
+	std::cout << "Please enter what sleep mode to use\n[+] level 1 : 1 min\n[+] level 2 : 60 min\n[+] level 3 : 1 day\n(press 1, 2, or 3 then press enter):\n";
 	size_t level = 1;
 	std::cin >> level;
 	//if the level selected sleep level by the user is 'NOT' greater-than or equal to 1, AND 'NOT' Less-than or equal to 3 
@@ -74,21 +72,25 @@ int main()
 	if(!(fs::exists(where_to_save))){
 		throw std::runtime_error("Please enter a valid location for saving your backups..");
 	}
-	
+
 	std::cout << "please enter a directory to be searched:\n";
 	std::cin >> where_to_search_for_symboled_files;
-	if(!(fs::exists(where_to_search_for_symboled_files))){
+
+	if(!(fs::exists(where_to_search_for_symboled_files)))
+	{
 		throw std::runtime_error("Please enter a valid location for finding your backups to save..");
 	}
 
 	while(level >= 1 && level <= 3) //add every half day update option
 	{	
 		std::vector<fs::path> search_this_Data;
+		//i dont like how these if's are repeating...
 		if(users_character_choice == 'S' || users_character_choice == 's')
 		{
 			search_this_Data
 			= Star_Saver::search_directory_files(where_to_search_for_symboled_files, symbol);
 		}
+
 		else if(users_character_choice == 'R' || users_character_choice == 'r'){
 			search_this_Data
 			= Star_Saver::search_directory_files(where_to_search_for_symboled_files, reg_search_critera);
@@ -101,14 +103,15 @@ int main()
 			= File_Extension_Org::create_extension_directory(file_extensions, where_to_save);
 
 		Star_Saver::save_copy_of_symbol_files(search_this_Data, directories_of_extensions);
-		
-		if(users_character_choice == 'S' || users_character_choice == 's'){
+
+		if(users_character_choice == 'S' || users_character_choice == 's')
+		{
 			Star_Saver::linux_star_removal_service(where_to_save, symbol);
 		}
+
 		how_often_to_repeat(level);
 	}
 }
-
 /*    TODO: Read from memory into file, check file entries (in secondary thread) 
       To see if any previous values are still valid and if so, save into vector
       Merge to what ss has found and use that data for files to backup?
