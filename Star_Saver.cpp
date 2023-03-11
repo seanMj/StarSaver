@@ -161,7 +161,7 @@ namespace Star_Saver
 			for (auto& ii : symbol_files)
 			{
 				std::string removed_dot_extension = ii.extension().string();
-				removed_dot_extension = removed_dot_extension.erase(0, 1);
+				removed_dot_extension 			  = removed_dot_extension.erase(0, 1);
 			
 				if (removed_dot_extension == where_to_save[i].filename())
 				{
