@@ -64,8 +64,7 @@ namespace Star_Saver
 		{
 			const fs::path file_path = where_to_check;
 
-			if (file_path.has_filename() || !(fs::is_directory(file_path)) 
-											|| !(fs::is_empty(file_path))) 
+			if (file_path.has_filename() || !(fs::is_directory(file_path)) || !(fs::is_empty(file_path))) 
 			{
 				if (isSymboled(file_path.filename(), pattern))
 				{
@@ -90,12 +89,11 @@ namespace Star_Saver
 		for (const fs::directory_entry& where_to_check : fs::recursive_directory_iterator{ where_to_look, std::filesystem::directory_options::skip_permission_denied })
 		{
 			const fs::path file_path = where_to_check;
-			if (file_path.has_filename()
-				|| !fs::is_empty(file_path))
+			if (file_path.has_filename() || !fs::is_empty(file_path))
 			{
 				if (isSymboled(file_path.filename(), symbol_being_used))
 				{
-						symboled_files.push_back(file_path);
+					symboled_files.push_back(file_path);
 				}
 			}
 		}
@@ -116,12 +114,11 @@ namespace Star_Saver
 			for (const fs::directory_entry& where_to_check : fs::recursive_directory_iterator{ current_vector_directory, std::filesystem::directory_options::skip_permission_denied })
 			{
 				const fs::path file_path = where_to_check;
-				if (file_path.has_filename()
-					|| !fs::is_empty(file_path))
+				if (file_path.has_filename() || !fs::is_empty(file_path))
 				{
 					if (isSymboled(file_path.filename(), symbol_being_used))
 					{
-							symboled_files.push_back(file_path);
+						symboled_files.push_back(file_path);
 					}
 				}
 			}
@@ -135,21 +132,20 @@ namespace Star_Saver
 	*/
 	void save_copy_of_symbol_files(std::vector<fs::path>& symbol_files, fs::path where_to_save) 
 	{
-			for (auto& ii : symbol_files)
-			{
-				std::string removed_dot_extension = ii.extension().string();
-				removed_dot_extension = removed_dot_extension.erase(0, 1);
+		for (auto& ii : symbol_files)
+		{
+			std::string removed_dot_extension = ii.extension().string();
+			removed_dot_extension = removed_dot_extension.erase(0, 1);
 			
-				
-					const auto copy_options = fs::copy_options::update_existing
-						| fs::copy_options::recursive;				
-					if (!fs::exists(where_to_save.string() + removed_dot_extension)) 
-					{
-						std::cout <<  "[+] " << where_to_save.string() << "\tSaving a "<< ii.extension().string() <<" file\n";
-						fs::copy(ii, where_to_save, copy_options);
-					}
-				
-			}	
+			const auto copy_options = fs::copy_options::update_existing | fs::copy_options::recursive;		
+			
+			if (!fs::exists(where_to_save.string() + removed_dot_extension)) 
+			{
+				std::cout <<  "[+] " << where_to_save.string() << "\tSaving a "<< ii.extension().string() <<" file\n";
+				fs::copy(ii, where_to_save, copy_options);
+			}
+
+		}	
 	}
 
 	//Overload Of: save_copy_of_symbol_files(std::vector<fs::path>& symbol_files, fs::path& where_to_save) ^
@@ -169,8 +165,7 @@ namespace Star_Saver
 			
 				if (removed_dot_extension == where_to_save[i].filename())
 				{
-					const auto copy_options = fs::copy_options::update_existing
-						| fs::copy_options::recursive;				
+					const auto copy_options = fs::copy_options::update_existing | fs::copy_options::recursive;				
 					if (!fs::exists(where_to_save[i].string() + removed_dot_extension)) 
 					{
 						std::cout <<  "[+] " << where_to_save[i].string() << "\tSaving a "<< ii.extension().string() <<" file\n";
@@ -196,21 +191,24 @@ namespace Star_Saver
 		{
 			const fs::path curr_file = curr_dir;
 			std::string removed_dot_extension = curr_file.extension().string();
-						removed_dot_extension = removed_dot_extension.erase(0, 1);
+			removed_dot_extension = removed_dot_extension.erase(0, 1);
 
 			if(isSymboled(curr_file, symbol_to_be_removed))
 			{
+				std::string curr_file_to_string = curr_file.filename().string();
+				std::string curr_file_symbol_erase = curr_file_to_string.erase(0,2);
+
+				//worst written part of the code... thats better.. fixed its crazyness
 				std::cout << "[+] " << directory_to_remove_symbols_from.string()	+
 							removed_dot_extension				+
 							"/" 								+ 
-							curr_file.filename().string() << "\tRemoving Symbol From Filename...\n";
-
+							curr_file_to_string << "\tRemoving Symbol From Filename...\n";
+				//this can be optimized as to not have to reiterate through a directory again.
 				fs::rename(curr_file, 
 							directory_to_remove_symbols_from.string()	+
 							removed_dot_extension				+
 							"/" 								+ 
-							curr_file.filename().string().erase(0,2));
-			}
+							curr_file_symbol_erase);
 		}
 	}
 };
