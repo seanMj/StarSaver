@@ -3,26 +3,30 @@
 #include <thread>
 #include <exception>
 #include <iostream>
-void how_often_to_repeat(size_t level){
+void how_often_to_repeat(size_t level)
+{
     if(level == 1)
     {
         //section of code taken from: https://en.cppreference.com/w/cpp/thread/sleep_for
         using namespace std::chrono_literals;
         std::cout << "Level 1 Sleeping ..." << '\n';
         std::this_thread::sleep_for(60000ms);
-    }if(level == 2)
+    }
+    if(level == 2)
     {
         using namespace std::chrono_literals;
         std::cout << "Level 2 Sleeping ..." << '\n';
         std::this_thread::sleep_for(3600000ms);
-
-    }if(level == 3)
+    //add level for 1/2 a day updates for the user.
+    }
+    if(level == 3)
     {
         using namespace std::chrono_literals;
         std::cout << "Level 3 Sleeping ..." << '\n';
         std::this_thread::sleep_for(86400000ms);
 
-    }else if(!(level >= 1) && !(level <=3)){
+    }
+    else if(!(level >= 1) && !(level <=3)){
 
         throw std::logic_error("sorry wrong timing input");
     }
@@ -32,12 +36,12 @@ void how_often_to_repeat(size_t level){
 /*
 *   Save copies of listed files, and checks for new additions every N minutes,
 *   Using Pre-Selected options (Days/ Minutes/ Seconds), that will determine how often the program will run:
-        [1]: 2.5   min
-        [2]: 7.5   min
-        [3]: 10.0  min
-        [4]: 30.0  min
-        [5]: 90.0  min
-        [6]: 1     Day
+        [1]: n      T
+        [2]: n      T
+        [3]: n      T
+        [4]: 1      minute
+        [5]: 1      Hour
+        [6]: 1      Day
 
     *------------------------------------------------------------------------------------
 
