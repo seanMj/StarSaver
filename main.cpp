@@ -1,4 +1,4 @@
-//by. Sean Jesky i hope this helps someone out there. Please don't use in a responsible way.. 
+//by. Sean Jesky i hope this helps someone out there. Please use in a responsible way.. 
 /* 
  * FILE('s): main.cpp
  * DATE&TIME: feb 2023
