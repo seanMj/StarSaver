@@ -27,15 +27,23 @@ dreaming the night.
               
 -
     TODO(5): implementation of optimizing functions by implementing data lookups instead of iteration for example.
+
     TODO(4): Fix bug when symbol is moved from start to middle of filename.
           Causes the program to try and remove a symbol it cannot reach.
           Honestly should have thought of that first. 
+
     TODO(1): fix bug when using more then one save directory, and more than one search directory. 
+ 
     TODO(2): fix regex
+
     TODO(0): check to see if it will run on windows. 
+
     TODO(3): allow non-organized Data saving. 
 -    
     TODO: I'm sure something else will come up after my code review so this is placeholder. 
+
     TODO: ...
+
     TODO: GET A LIFE.
+
     TODO: finish this code review... I didn't expect even >=20 people to start using this so quickly, and more everyday it seems. 
