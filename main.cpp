@@ -11,7 +11,13 @@
 //TODO: try and find a way to store data within the .reloc section of the code itself
 //otherwise, store in reg. key for further use.
 //TODO: make sure to finish user input validation and checks first. 
+
 #include <vector>
+#include <iostream>
+#include <string>
+#include <regex>
+#include <filesystem>
+//..
 #include "Star_Saver.hpp"
 #include "File_Extension_Orginization.hpp"
 #include "StarTimeSaver.hpp"
@@ -103,7 +109,7 @@ int main()
 	}
 }
 
-/*TODO: Read from memory into file, check file entries (in secondary thread) 
+/*    TODO: Read from memory into file, check file entries (in secondary thread) 
       To see if any previous values are still valid and if so, save into vector
       Merge to what ss has found and use that data for files to backup?
 */
