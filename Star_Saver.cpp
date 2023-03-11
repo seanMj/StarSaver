@@ -209,6 +209,7 @@ namespace Star_Saver
 							removed_dot_extension				+
 							"/" 								+ 
 							curr_file_symbol_erase);
+			}
 		}
 	}
 };
