@@ -26,9 +26,6 @@ dreaming the night.
         File exists
         Update existing file. 
 
-
-
-
     TODO(5): implementation of optimizing functions by implementing data lookups instead of iteration for example.
 
     TODO(4): Fix bug when symbol is moved from start to middle of filename.
@@ -50,3 +47,6 @@ dreaming the night.
     TODO: GET A LIFE.
 
     TODO: finish this code review... I didn't expect even >=20 people to start using this so quickly, and more everyday it seems. 
+
+Fixes: added user input validation checks for... user input
+
