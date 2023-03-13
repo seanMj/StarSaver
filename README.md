@@ -17,12 +17,19 @@ dreaming the night.
      Basically how it works. Simple but allows very very fast backup lookup without a bunch of hassle by the user. 
      
 This program was written with the user in mind, not for me or because.
-Ex.
-Searching for Files:
-Found **filename.png
-Creating Directory named png
-Does the file not exist
-Copy file to png
-Remove symbol from **filename.png to filename.png 
-File exists
-Update existing file.
+
+    [+] Searching for Files:
+    
+    [+] Found **filename.png
+    
+    [+] Creating Directory named png
+    
+    [+] Does the file not exist
+    
+    [+] Copy file to png
+    
+    [+] Remove symbol from **filename.png to filename.png 
+    
+    [+] File exists
+    
+    [+] Update existing file.
