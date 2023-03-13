@@ -24,12 +24,12 @@ This program was written with the user in mind, not for me or because.
     
     [+] Creating Directory named png
     
-    [+] Does the file not exist
+        [-] Does the file not exist
     
     [+] Copy file to png
     
     [+] Remove symbol from **filename.png to filename.png 
     
-    [+] File exists
+        [-] File exists
     
     [+] Update existing file.
