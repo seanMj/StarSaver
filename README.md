@@ -1,6 +1,8 @@
 # StarSaver backup program! [My Free time project]
-someone knows something I dont... i could feel it... somewhere somehow i missed something, somewhere.. its driving me crazy
+someone knows something I dont... i could feel it... somewhere somehow i missed something, somewhere.. 
+
 Working, WORK IN PROGRESS, ONLY SUPPORTS A SINGLE DIRECTORYS FOR SEARCH AND SAVE, OH GOD ITS IN ALL CAPS. 
+
 Files to be be used for backup with this program must have two symbols for it to find the correct file eg. [**Filename].txt
 when someone needs to save backups by simply adding a symbol to the file, this symbol is then removed from within file in the saved directory
 for the user allowing easier data saving, each cycle it will find the new files that have been added. 
