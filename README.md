@@ -6,15 +6,17 @@ when someone needs to save backups by simply adding a symbol to the file, this s
 for the user allowing easier data saving, each cycle it will find the new files that have been added. 
 -
     Compile: clang++ main.cpp        --std=c++17 -lstdc++fs -o StarSaver          #Size: ~645K
-    #
+    
     Compile: clang++ main.cpp -Os -s --std=c++17 -lstdc++fs -o StarSaver          #Size: ~129K
-    #
+    
     Compile: clang++ main.cpp -O1 -s --std=c++17 -lstdc++fs -o StarSaver          #Size: ~161K
-    #
-    Compile: clang++ main.cpp -O2    --std=c++17 -lstdc++fs -o StarSaver          #Size: ~221K
-    #
-    Compile: clang++ main.cpp -O0 -g --std=c++17 -lstdc++fs -o StarSaver          #Size: ~1.7MB
-    #
+    
+    Compile: 
+    clang++ main.cpp -O2    --std=c++17 -lstdc++fs -o StarSaver          #Size: ~221K
+    
+    Compile:
+    clang++ main.cpp -O0 -g --std=c++17 -lstdc++fs -o StarSaver          #Size: ~1.7MB
+    
     Or, Using UPX idk i was curious:
     Compile: clang++ main.cpp -O2 -s --std=c++17 -lstdc++fs -o StarSaver          #Size: 61K
 
