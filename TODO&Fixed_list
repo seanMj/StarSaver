@@ -1,0 +1,25 @@
+TODO(0): check to see if it will run on windows.
+
+TODO(0.5): Place Erasing of symbols on seperate thread, no reasion for it to use main thread.
+
+TODO(1): fix bug when using more then one save directory, and more than one search directory.
+
+TODO(2): fix regex
+
+TODO(3): allow non-organized Data saving.
+
+TODO(4): Fix bug when symbol is moved from start to middle of filename. Causes the program to try and remove a symbol it cannot reach. Honestly should have thought of that first.
+
+TODO(5): implementation of optimizing functions by implementing data lookups instead of iteration for example.
+
+TODO(6):
+
+TODO(7):
+
+TODO(8):
+
+TODO: I'm sure something else will come up after my own little code review, so these are placeholders.
+
+TODO: ...
+
+TODO: GET A LIFE.
